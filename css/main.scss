@@ -1,0 +1,287 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color:#f7ca3e;
+}
+body {
+    overflow-x: hidden;
+    height:3000px
+    
+}
+
+// Start Header Section
+header {
+    .navbar {
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        background-color:white;
+    }
+    .navbar-brand {
+        height:50px;
+        width:50px;
+        img {
+            width:100%;
+        }
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+        .nav-link {
+            color:black;
+            margin-right: 10px;
+            transition: all .5 ease-in-out;
+            position: relative;
+            &:hover {
+                color:var(--main-color);
+            }
+            &::after {  
+                content: " ";
+                position: absolute;
+                height:2px;
+                width:0;
+                bottom:0;
+                left:10px;
+                background-color:var(--main-color);
+                transition: all .5s ease-in-out;
+            }
+            &:hover::after {
+                width:40px;
+            }
+        }
+    }
+   .navbar-toggler {
+       color:var(--main-color);
+        box-shadow: 0 0 4px rgba(0,0,0,.5);
+    &:focus ,&:active {
+        box-shadow:  0 0 4px rgba(0,0,0,.5);;
+    }
+   }
+}
+
+// End Header Section
+
+// Start Home Section
+.home {
+   
+   .homeContent {
+       padding-top:180px;
+       h1 {
+           font-family:'Bebas Neue', cursive;
+           font-size: 70px;
+           font-weight: bold;
+           letter-spacing: 2px;
+           line-height: 1.3;
+
+       }
+       p {
+           font-weight: bold;
+       }
+       a {
+        padding:7px 30px;
+        border:1px solid var(--main-color);
+        border-radius: 30px;
+        transition: all .5 ease-in-out;
+        &:hover {
+            background-color:var(--main-color);
+            color:white
+        }
+        
+    }
+   }
+   .homeImage {
+       position: relative;
+       padding-top:150px;
+       .lowerLayer {
+           width:160%;
+           position: absolute;
+           top:-20%;
+           right:-40%;
+           transform: rotateZ(30deg);
+           z-index: -1;
+           transition: all 2s ease-in-out;
+          .layersContainer {
+              position: relative;
+            .Layer1 {
+                position: absolute;
+                width:100%;
+                height:400px;
+                background-color:var(--main-color);
+                border-radius: 20px;
+                left:-50px;
+                top:50px;
+                
+                
+
+            }
+            .Layer2 {
+             position: absolute;
+             width:100%;
+             height:400px;
+             background-color:white;
+             border-radius: 20px;
+             box-shadow: 0 0 8px rgba(0,0,0,.5);
+             
+            }
+          }
+       }
+   }
+  
+}
+
+@media (max-width:727px) {
+    .home{
+        text-align: center;
+        .homeContent{
+            padding-top: 100px;
+            h1{
+                font-size: 50px;
+            }
+        }
+        .homeImage{
+            padding-top: 50px;
+        }
+    }
+}
+
+
+// Was Tested And Animation is not in mobile version
+// End Home Section
+
+// Start About Us Section 
+.aboutUs {
+    margin-top:50px;
+    .aboutUsImage {
+        .InImage {
+            img {
+                width:100%;
+                height:500px;
+                background-image: url("../images/about-img.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+                
+            }
+        }
+    }
+    .aboutUsContent {
+        padding-top:120px;
+        h3 {
+            font-family:'Bebas Neue', cursive;
+            font-size:40px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        a {
+            padding:7px 30px;
+            border:1px solid var(--main-color);
+            border-radius: 30px;
+            transition: all .5 ease-in-out;
+            &:hover {
+                background-color:var(--main-color);
+                color:white
+            }
+            
+        }
+    }
+}
+
+@media (max-width:727px) {
+    .aboutUs {
+        .aboutUsContent {
+            text-align: center;
+            padding-top:50px
+        }
+    }
+}
+
+// Was Tested 
+// End About Us Section
+
+// Start Menu
+.menu {
+    margin-top:50px;
+    h3 {
+        font-family:'Bebas Neue', cursive ;
+        font-weight: bold;
+        font-size: 50px;
+        
+    }
+    span {
+        color:var(--main-color)
+    }
+    // To make it global
+    .menu-bar {
+        margin-top:30px;
+        padding: 30px;
+        border-top:2px dashed gray;
+        border-bottom:2px dashed gray ;
+        a {
+            padding:7px 30px;
+            border:1px solid var(--main-color);
+            border-radius: 30px;
+            transition: all .5 ease-in-out;
+            &:hover {
+                background-color:var(--main-color);
+                color:white
+            }
+            
+        }
+    }
+   
+    .row.content {
+        margin-top:50px;
+        
+        .menuImg {
+            background-color:white;
+            box-shadow: 0 0 10px rgba(0,0,0,.5);
+            margin-top:40px;
+            img {
+                width: 100%;
+                padding:20px;
+            }
+        }
+        .menuContent {
+            h4 {
+                font-weight: bold;
+                font-size: 30px;
+                font-family: 'Bebas Neue', cursive ;
+                letter-spacing: 3px;
+                span {
+                    margin-right:10px
+                }
+            }
+            p {
+                padding-left:50px;
+            }
+        }
+    }
+    
+
+
+}
+
+@media (max-width:727px) {
+  .menu {
+    .row.controls {
+        margin-top: 40px;
+        --bs-gutter-x:1.5rem;
+        a {
+            margin-bottom: 10px;
+        }
+            
+    }
+    .row.content {
+        text-align: center;
+       .menuContent {
+           ul {
+               li {
+                   margin-top:40px;
+               }
+           }
+       }
+    }
+  }
+}
+// End Menu
