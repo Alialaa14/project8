@@ -11,7 +11,7 @@
 
 body {
   overflow-x: hidden;
-  height: 3000px;
+  height: 6000px;
 }
 
 header .navbar {
@@ -269,6 +269,9 @@ header .navbar-toggler:focus, header .navbar-toggler:active {
 }
 
 @media (max-width: 727px) {
+  .menu h3 {
+    font-size: 30px;
+  }
   .menu .row.controls {
     margin-top: 40px;
     --bs-gutter-x:1.5rem;
@@ -282,5 +285,143 @@ header .navbar-toggler:focus, header .navbar-toggler:active {
   .menu .row.content .menuContent ul li {
     margin-top: 40px;
   }
+  .menu .row.content .menuContent h4 {
+    font-size: 20px;
+  }
+  .menu .row.content .menuContent p {
+    padding-left: 0;
+  }
+}
+
+.popularFood {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 90px;
+  background-image: url("../images/popular-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.popularFood h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.popularFood h3 span {
+  color: var(--main-color);
+}
+
+.popularFood .food-item {
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.popularFood .food-item .card {
+  padding: 10px;
+  background-color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.popularFood .food-item .card:hover {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.popularFood .food-item .card p {
+  margin-bottom: 3px;
+}
+
+.popularFood .food-item .card p i {
+  color: var(--main-color);
+}
+
+.popularFood .food-item .card span {
+  font-size: 20px;
+}
+
+.popularFood .food-item .card a {
+  margin-top: 10px;
+  padding: 7px 30px;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  -webkit-transition: all .5 ease-in-out;
+  transition: all .5 ease-in-out;
+}
+
+.popularFood .food-item .card a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+@media (max-width: 727px) {
+  .popularFood h3 {
+    font-size: 20px;
+  }
+  .popularFood .food-item {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.gallery {
+  margin-top: 200px;
+}
+
+.gallery h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.gallery h3 span {
+  color: var(--main-color);
+}
+
+.gallery .image {
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery .image img {
+  width: 100%;
+}
+
+.gallery .image .overlay {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.gallery .image .overlay p {
+  font-size: 30px;
+  font-family: 'Bebas Neue', cursive;
+  color: white;
+}
+
+.gallery .image:hover .overlay {
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
